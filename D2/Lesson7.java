@@ -8,6 +8,15 @@ import java.util.Arrays;
  * 
  * outer for loop goes to n
  * inner while loop goes with condition `j > 0 && arr[j - 1] > arr[j]`
+ * 
+ * 
+ * 
+ Case         Complexity 
+ Best           O(n) 
+ Average       O(n²) 
+ Worst         O(n²) 
+ Extra Space    O(1) 
+
  */
 
 public class Lesson7 {
