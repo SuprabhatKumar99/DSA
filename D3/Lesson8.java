@@ -73,8 +73,8 @@ flow of merge sort
             ↓
     merge(left, right)
 
-
-
+Why can't we simply merge two array using the two-pointer merge procedure?
+Because the two halves must already be sorted. That's why recursion sorts each half before merge() is called.
 */
 
 import java.util.Arrays;
