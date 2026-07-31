@@ -24,9 +24,48 @@ Why arr.length - 1?
     Because inside the loop we access: arr[i + 1] => becomes: arr[arr.length]
     which is outside the array and causes: ArrayIndexOutOfBoundsException
 
-
-
 Descending Order
+
+
+Strictly Increasing vs Non-Decreasing
+    Strictly Increasing
+        Condition: arr[i] < arr[i+1], Duplicates are not allowed.
+
+    Non-Decreasing
+        Duplicates are allowed.
+        Condition: arr[i] <= arr[i+1]
+
+    
+Edge Cases 
+    Single Element: already sorted return true
+    Empty Array: Also considered sorted, return true
+    All Equal Elements: No adjacent element is greater than the next, return true
+
+
+Interview Insight
+    Whenever you need to verify a sorted array, remember:
+        Sorting is a local property. If every adjacent pair is in the correct order, the entire array is in order.
+
+    This pattern appears in many advanced problems, such as:
+        Detecting the first inversion
+        Finding the rotation point in a rotated sorted array
+        Checking whether an array can be made sorted with one swap
+
+Summary: Check Sorted Array
+
+    Traverse once
+        ↓
+    Compare adjacent elements
+
+    arr[i] > arr[i+1] ?
+        ↓
+        Yes
+        ↓
+    Return false
+
+    Otherwise
+        ↓
+    Return true
 */
 
 public class Lesson11 {
